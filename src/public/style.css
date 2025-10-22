@@ -1,3 +1,7 @@
+.font-script {
+  font-family: 'Dancing Script', cursive;
+}
+
 /* Style minimalis untuk scrollbar */
 .minimal-scroll {
   overflow-y: scroll;
@@ -27,18 +31,26 @@
   /* Membuat ujung track bulat */
 }
 
-.font-script {
-  font-family: 'Dancing Script', cursive;
+.project-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(99, 102, 241, 0.6) transparent;
 }
 
-@keyframes blink {
-  0%,
-  100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: white;
-  }
+.project-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.project-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.8));
+  border-radius: 9999px;
+}
+
+.project-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, rgba(129, 140, 248, 0.9), rgba(167, 139, 250, 0.9));
 }
 
 #typingText {
@@ -163,4 +175,53 @@ html {
 
 .triangle-float3 {
   animation: float3 6s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    border-color: #3730a3;
+  } /* indigo-800 */
+  51%,
+  100% {
+    border-color: transparent;
+  }
+}
+#typingText {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.marquee {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+/* Stop animasi di layar md ke atas */
+@media (min-width: 768px) {
+  .marquee {
+    animation: none;
+    transform: translateX(0); /* biar kembali normal */
+    justify-content: center;
+  }
+}
+
+.skill-content {
+  animation: infinite-scroll 10s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

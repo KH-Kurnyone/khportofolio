@@ -40,9 +40,16 @@ const header = document.getElementById('mainHeader');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 10) {
     header.classList.remove('bg-transparent');
-    header.classList.add('bg-gray-950', 'shadow-md', 'shadow-gray-800');
+    header.classList.add(
+      'bg-gradient-to-r',
+      'from-indigo-800/80', // transparan
+      'to-indigo-950/80', // transparan
+      'shadow-md',
+      'shadow-gray-800',
+      'backdrop-blur-md' // efek blur
+    );
   } else {
-    header.classList.remove('bg-gray-950', 'shadow-md', 'shadow-gray-800');
+    header.classList.remove('bg-gradient-to-r', 'from-indigo-800/80', 'to-indigo-950/80', 'shadow-md', 'shadow-gray-800', 'backdrop-blur-md');
     header.classList.add('bg-transparent');
   }
 });
@@ -62,12 +69,12 @@ function setActiveLink() {
   });
 
   navLinks.forEach((link) => {
-    link.classList.remove('border-b', 'border-gray-50', 'text-gray-400');
-    link.classList.add('hover:border-b', 'hover:border-gray-400', 'hover:text-gray-400');
+    link.classList.remove('border-b-2', 'border-gray-50', 'text-gray-400');
+    link.classList.add('hover:border-b-2', 'hover:border-gray-400', 'hover:text-gray-400');
 
     if (link.getAttribute('href').includes(current)) {
-      link.classList.add('border-b', 'border-gray-50');
-      link.classList.remove('hover:border-b', 'hover:border-gray-400', 'hover:text-gray-400');
+      link.classList.add('border-b-2', 'border-gray-50');
+      link.classList.remove('hover:border-b-2', 'hover:border-gray-400', 'hover:text-gray-400');
     }
   });
 }
@@ -94,37 +101,71 @@ document.querySelectorAll('a.nav-link').forEach((anchor) => {
 // ----- Tab skill dan riwayat pendidikan di section 2
 const btnSkills = document.getElementById('btnTabSkills');
 const btnEdu = document.getElementById('btnTabEducational');
+const btnAnother = document.getElementById('btnTabAnother');
+
 const tabSkills = document.getElementById('tabSkills');
 const tabEdu = document.getElementById('tabEducational');
+const tabAnother = document.getElementById('tabAnother');
 
-function switchTab(showTab, hideTab, activeBtn, inactiveBtn) {
-  // Sembunyikan tab lama
-  hideTab.classList.remove('opacity-100');
-  hideTab.classList.add('opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+// Kumpulkan semua tab & tombol
+const tabs = [tabSkills, tabEdu, tabAnother];
+const buttonsTab = [btnSkills, btnEdu, btnAnother];
 
-  // Tampilkan tab baru
-  showTab.classList.remove('opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
-  showTab.classList.add('opacity-100');
+function switchTab(showTab, activeBtn) {
+  // Loop semua tab dan tombol
+  tabs.forEach((tab) => {
+    if (tab === showTab) {
+      tab.classList.remove('opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+      tab.classList.add('opacity-100');
+    } else {
+      tab.classList.remove('opacity-100');
+      tab.classList.add('opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+    }
+  });
 
-  // Update style tombol
-  activeBtn.classList.add('text-indigo-700', 'border-b-2', 'border-indigo-700');
-  activeBtn.classList.remove('hover:text-gray-400', 'hover:border-b-2', 'hover:border-gray-400');
-
-  inactiveBtn.classList.add('hover:text-gray-400', 'hover:border-b-2', 'hover:border-gray-400');
-  inactiveBtn.classList.remove('text-indigo-700', 'border-b-2', 'border-indigo-700');
+  buttonsTab.forEach((btn) => {
+    if (btn === activeBtn) {
+      btn.classList.add('text-indigo-500', 'border-b-2', 'border-indigo-500');
+      btn.classList.remove('hover:text-gray-400', 'hover:border-b-2', 'hover:border-gray-400');
+    } else {
+      btn.classList.remove('text-indigo-500', 'border-b-2', 'border-indigo-500');
+      btn.classList.add('hover:text-gray-400', 'hover:border-b-2', 'hover:border-gray-400');
+    }
+  });
 }
 
-btnSkills.addEventListener('click', () => {
-  switchTab(tabSkills, tabEdu, btnSkills, btnEdu);
-});
+// Event listener
+if (btnSkills && tabSkills) btnSkills.addEventListener('click', () => switchTab(tabSkills, btnSkills));
+if (btnEdu && tabEdu) btnEdu.addEventListener('click', () => switchTab(tabEdu, btnEdu));
+if (btnAnother && tabAnother) btnAnother.addEventListener('click', () => switchTab(tabAnother, btnAnother));
 
-btnEdu.addEventListener('click', () => {
-  switchTab(tabEdu, tabSkills, btnEdu, btnSkills);
-});
+// ----- Tab pengalaman (Magang vs Organisasi) di section pengalaman
+const btnTabMagang = document.getElementById('btnTabMagang');
+const btnTabOrganisasi = document.getElementById('btnTabOrganisasi');
+const tabMagang = document.getElementById('tabMagang');
+const tabOrganisasi = document.getElementById('tabOrganisasi');
+
+if (btnTabMagang && btnTabOrganisasi && tabMagang && tabOrganisasi) {
+  function switchExperience(showTab, hideTab, activeBtn, inactiveBtn) {
+    // Tampilkan tab yang dipilih, sembunyikan yang lain
+    showTab.classList.remove('hidden');
+    hideTab.classList.add('hidden');
+
+    // Update style tombol aktif/non-aktif
+    activeBtn.classList.add('text-indigo-500', 'border-b-2', 'border-indigo-500');
+    activeBtn.classList.remove('hover:text-gray-400', 'hover:border-b-2', 'hover:border-gray-400');
+
+    inactiveBtn.classList.remove('text-indigo-500', 'border-b-2', 'border-indigo-500');
+    inactiveBtn.classList.add('hover:text-gray-400', 'hover:border-b-2', 'hover:border-gray-400');
+  }
+
+  btnTabOrganisasi.addEventListener('click', () => switchExperience(tabOrganisasi, tabMagang, btnTabOrganisasi, btnTabMagang));
+  btnTabMagang.addEventListener('click', () => switchExperience(tabMagang, tabOrganisasi, btnTabMagang, btnTabOrganisasi));
+}
 
 // ----- Carousel quote
-const quotes = Array.from({ length: 5 }, (_, i) => document.getElementById(`quote${i + 1}`));
-const buttons = Array.from({ length: 5 }, (_, i) => document.getElementById(`btnQuote${i + 1}`));
+const quotes = Array.from({ length: 3 }, (_, i) => document.getElementById(`quote${i + 1}`));
+const buttons = Array.from({ length: 3 }, (_, i) => document.getElementById(`btnQuote${i + 1}`));
 let currentQuote = 0;
 
 function showQuote(nextIndex) {
@@ -145,7 +186,7 @@ function showQuote(nextIndex) {
 
   // Update indikator bulat
   buttons.forEach((btn, i) => {
-    btn.classList.toggle('bg-indigo-700', i === nextIndex);
+    btn.classList.toggle('bg-indigo-600', i === nextIndex);
     btn.classList.toggle('bg-gray-400', i !== nextIndex);
   });
 
@@ -170,7 +211,6 @@ document.getElementById('btnPrevious').addEventListener('click', () => {
 const btnProject1 = document.getElementById('btnProject1');
 const btnProject2 = document.getElementById('btnProject2');
 const tabProject1 = document.getElementById('tabProject1');
-const tabProject2 = document.getElementById('tabProject2');
 
 btnProject1.addEventListener('click', function () {
   tabProject1.classList.remove('hidden');

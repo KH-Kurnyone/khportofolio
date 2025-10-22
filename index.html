@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
     <!-- Favicons -->
     <link href="src/img/logo.png" rel="icon" />
     <link href="src/img/logo.png" rel="apple-touch-icon" />
-    <title>Khikmal Kurniawan</title>
+    <title>Portofolio Khikmal</title>
     <link href="src/output.css" rel="stylesheet" />
     <!-- Letakkan di dalam <head> -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
@@ -18,17 +18,18 @@
     <link rel="stylesheet" href="src/public/style.css" />
   </head>
   <body class="minimal-scroll overflow-x-hidden">
-    <header id="mainHeader" class="fixed top-0 left-0 right-0 flex z-50 justify-between px-5 lg:px-10 py-3 bg-transparent text-gray-50 transition-colors duration-300">
-      <div class="flex items-center gap-2">
-        <img src="src/img/logo.png" alt="logo" class="w-5" />
-        <h1 class="font-bold text-lg lg:text-xl">Khikmal Kurniawan</h1>
+    <header id="mainHeader" class="fixed top-0 left-0 right-0 flex z-50 justify-between text-gray-50 px-5 lg:px-10 py-4 bg-transparent transition-colors duration-300">
+      <div class="flex items-center gap-2 w-full">
+        <h1 class="font-bold text-xl lg:text-3xl font-script">Portofolio Khikmal</h1>
       </div>
-      <div class="flex items-center gap-10">
+      <div class="flex items-center justify-end gap-12 w-full">
         <div id="navbar" class="gap-5 hidden lg:flex">
-          <a href="#homeSection" class="nav-link">Beranda</a>
-          <a href="#aboutMeSection" class="nav-link">Tentang Saya</a>
-          <a href="#myProjectSection" class="nav-link">Proyek</a>
-          <a href="#experienceSection" class="nav-link">Pengalaman</a>
+          <a href="#homeSection" class="nav-link whitespace-nowrap font-semibold">Beranda</a>
+          <a href="#aboutMeSection" class="nav-link whitespace-nowrap font-semibold">Tentang Saya</a>
+          <a href="#myProjectSection" class="nav-link whitespace-nowrap font-semibold">Karya Proyek</a>
+          <a href="#experience" class="nav-link whitespace-nowrap font-semibold">Pengalaman</a>
+          <!-- <a href="#" class="nav-link whitespace-nowrap font-semibold">Penghargaan</a> -->
+          <!-- <button class="bg-indigo-700 text-gray-50 px-4 py-1 rounded-full font-semibold">Follow Me <i class="fa-solid fa-arrow-right ms-2"></i></button> -->
         </div>
         <!-- <div class="block lg:hidden">
           <button id="sidebar-toggle" class="text-gray-50">
@@ -38,10 +39,10 @@
       </div>
     </header>
 
-    <main>
+    <main style="overflow-x: hidden;">
       <!-- Home Section -->
-      <section id="homeSection" class="bg-gray-950 h-screen relative px-5 lg:px-10">
-        <div class="absolute left-0 right-0 top-0 bottom-0 overflow-x-hidden opacity-20">
+      <section id="homeSection" class="bg-gradient-to-b md:bg-gradient-to-r from-gray-950 to-indigo-950 h-screen relative px-5 lg:px-10 md:py-0">
+        <div class="absolute left-0 right-0 top-0 bottom-0 overflow-x-hidden opacity-20 scale-y-[-1]">
           <svg data-aos="zoom-in" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" class="h-[100%]" preserveAspectRatio="none" viewBox="0 0 1440 560">
             <g mask='url("#SvgjsMask1000")' fill="none">
               <rect width="1440" height="560" x="0" y="0" fill="#030712"></rect>
@@ -444,29 +445,78 @@
           </svg>
         </div>
 
-        <div class="z-20 flex justify-center items-center h-screen text-gray-50">
-          <div class="text-center">
-            <div data-aos="zoom-in-down">
-              <div class="flex justify-center">
-                <img src="src/img/logo.png" alt="logo" class="w-6 mb-3" />
-              </div>
-              <p>Hallo, Semuanya!</p>
-              <h1 class="font-bold text-4xl sm:text-6xl lg:text-7xl font-script">I'Am Khikmal Kurniawan</h1>
-              <h3 class="font-semibold text-2xl sm:text-3xl lg:text-4xl font-script flex items-center gap-3 justify-center">
-                <span>As</span>
-                <span id="typingText" class="border-r-2 border-white"></span>
+        <div class="z-20 flex flex-col md:flex-row justify-center items-center h-screen text-gray-50">
+          <div data-aos="fade-right" class="w-full lg:w-[55%]">
+            <div>
+              <p class="bg-gray-800 text-gray-50 p-2 w-fit mb-5 text-sm">Hallo, Semuanya!</p>
+              <h1 class="font-extrabold text-4xl sm:text-5xl lg:text-6xl font-script">I'Am Khikmal Kurniawan</h1>
+              <h3 class="font-semibold mt-2 text-3xl text-indigo-600 sm:text-5xl lg:text-6xl font-script flex items-center gap-3">
+                <span class="pb-5">As</span>
+                <span id="typingText" class="border-r-2 border-indigo-600 pb-5"></span>
               </h3>
             </div>
-            <div data-aos="zoom-in-up">
-              <p class="mt-5 text-sm sm:text-base">
-                Selamat datang di website portofolio saya, jelajahi dunia informatika <br />
-                yang mengembangkan teknologi untuk membuat setiap masalah lebih mudah.
-              </p>
-              <div class="flex justify-center mt-16">
-                <a href="#aboutMeSection" class="cursor-pointer nav-link flex flex-col items-center text-gray-50">
-                  <i class="fa-solid fa-chevron-down float-bounce text-xl"></i>
-                  <i class="fa-solid fa-chevron-down -mt-2 float-bounce text-xl"></i>
+            <div>
+              <p class="mt-3 text-sm sm:text-base">Selamat datang di situs portofolio saya. Jelajahi bidang informatika yang berfokus pada pengembangan teknologi untuk mempermudah penyelesaian berbagai permasalahan.</p>
+            </div>
+            <div class="flex items-center gap-6 mt-8">
+              <button class="bg-indigo-700 text-gray-50 drop-shadow-[0_0_5px_rgba(31,41,55,0.8)] px-4 py-2 rounded-full font-semibold">Follow Me <i class="fa-solid fa-arrow-right ms-2"></i></button>
+              <div class="flex items-center gap-2">
+                <a href="#" class="bg-[#010101] text-gray-50 drop-shadow-[0_0_5px_rgba(31,41,55,0.8)] px-4 py-2 rounded-full w-10 h-10 flex items-center justify-center">
+                  <i class="fa-brands fa-tiktok"></i>
                 </a>
+                <a href="#" class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-gray-50 drop-shadow-[0_0_5px_rgba(31,41,55,0.8)] px-4 py-2 rounded-full w-10 h-10 flex items-center justify-center">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="bg-[#0A66C2] text-gray-50 drop-shadow-[0_0_5px_rgba(31,41,55,0.8)] px-4 py-2 rounded-full w-10 h-10 flex items-center justify-center">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-left" class="z-20 w-full lg:w-[45%] justify-center mt-10 md:mt-0 hidden md:flex">
+            <img src="src/img/khikmal5.png" alt="image" class="w-[800px] lg:w-[900px] h-fit relative z-20 fade-out-bottom drop-shadow-[0_0_20px_rgba(31,41,55,0.8)]" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Skill -->
+      <section class="h-[100%] bg-gray-950 text-gray-50 p-5 lg:p-10 flex justify-center items-center relative overflow-hidden">
+        <div class="skill-container flex w-full overflow-hidden">
+          <div id="skill-content" class="skill-content flex gap-10 md:gap-16">
+            <div class="flex gap-2 items-center justify-center w-full ml-16">
+              <img src="src/img/iconLogicThinking.png" alt="icon1" class="w-[55px]" />
+              <div class="font-bold text-2xl">
+                Logic <br />
+                Thinking
+              </div>
+            </div>
+            <div class="flex gap-2 items-center justify-center w-full">
+              <img src="src/img/iconProblemSolving.png" alt="icon2" class="w-[70px]" />
+              <div class="font-bold text-2xl">
+                Problem <br />
+                Solving
+              </div>
+            </div>
+            <div class="flex gap-2 items-center justify-center w-full">
+              <img src="src/img/iconDeveloperWeb.png" alt="icon3" class="w-[70px]" />
+              <div class="font-bold text-2xl">
+                Developer <br />
+                Web
+              </div>
+            </div>
+            <div class="flex gap-2 items-center justify-center w-full">
+              <img src="src/img/iconDatabaseAnalyst.png" alt="icon4" class="w-[70px]" />
+              <div class="font-bold text-2xl">
+                Database <br />
+                Analyst
+              </div>
+            </div>
+            <div class="flex gap-2 items-center justify-center w-full">
+              <img src="src/img/iconPublicSpeaker.png" alt="icon5" class="w-[60px]" />
+              <div class="font-bold text-2xl">
+                Public <br />
+                Speaker
               </div>
             </div>
           </div>
@@ -474,595 +524,8 @@
       </section>
 
       <!-- About Me Section -->
-      <section id="aboutMeSection" class="h-[100%] lg:h-screen bg-gray-50 text-gray-950 p-5 lg:p-10 flex justify-center items-center relative">
-        <div class="absolute left-0 right-0 top-0 bottom-0 overflow-x-hidden opacity-20">
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" class="h-[100%]" preserveAspectRatio="none" viewBox="0 0 1440 560">
-            <g mask='url("#SvgjsMask1001")' fill="none">
-              <rect width="1440" height="560" x="0" y="0" fill="#f9fafb"></rect>
-              <path d="M1088.571,645.851C1121.068,644.069,1142.198,614.832,1157.211,585.956C1170.805,559.809,1177.871,528.788,1162.508,503.639C1147.644,479.307,1117.068,472.628,1088.571,473.589C1062.007,474.485,1037.863,486.455,1022.796,508.351C1005.046,534.145,992.011,566.028,1005.523,594.274C1020.595,625.781,1053.697,647.763,1088.571,645.851" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path>
-              <path d="M1060.8045432382773 252.77262486395958L1084.3981920020678 386.57885615648956 1218.2044232945977 362.9852073926991 1194.6107745308072 229.1789761001691z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float1"></path>
-              <path d="M-12.888388353115584 210.70763013269485L-41.255797404030815 303.49324430649165 51.52981676976596 331.8606533574068 79.89722582068119 239.07503918361007z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path>
-              <path d="M83.99109573776812 289.8520809097695L230.2007370169565 300.0760549998274 240.42471110701442 153.866413720639 94.21506982782603 143.6424396305811z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path>
-              <path d="M672.6869312086068 103.3706891758031L729.8341346625774 35.265304152821386 661.7287496395957-21.881899301149204 604.581546185625 46.223485721832496z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path>
-              <path d="M129.56285486605321 332.9763559120959L85.79695089683996 418.87177882500345 236.52303725080787 441.57292332236955z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float2"></path>
-              <path d="M1329.8047300062951 158.49261890369857L1269.8741244989665 238.0232185987748 1349.4047241940427 297.9538241061036 1409.3353297013714 218.42322441102732z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path>
-              <path d="M401.0906027690423-15.265883275142095L452.68228084193447 143.51697498504348 611.46513910212 91.92529691215131 559.8734610292279-66.85756134803427z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path>
-              <path d="M975.7179560460338 180.50058043340672L834.2946549732782 195.22851363329312 905.5872128738896 297.04483809459805z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float2"></path>
-              <path d="M823.1433172781008 170.66783930989314L845.0743628144911 252.51561551480881 956.8805043536695 178.69515910776536z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path>
-              <path d="M1293.0956535871583 346.82279111048854L1215.9094395512227 251.50575487380587 1120.59240331454 328.6919689097415 1197.7786173504755 424.00900514642416z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float2"></path>
-              <path d="M1471.0773890549979 275.31166922989854L1332.3905512510628 342.7902227190878 1442.830839305793 420.12134493706174z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float2"></path>
-              <path d="M214.16476510023085 5.222355730926832L76.44600782876904 78.44871788886095 149.67236998670316 216.16747516032277 287.39112725816494 142.94111300238865z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float1"></path>
-              <path d="M1162.1052666643382 488.8143373576915L1116.7030017154857 549.0651779479041 1229.7803950752307 587.0431550760766z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path>
-              <path d="M902.105,164.398C922.247,165.527,939.403,151.283,949.62,133.887C959.988,116.235,963.722,94.517,953.599,76.723C943.38,58.759,922.771,50.207,902.105,50.364C881.732,50.518,861.014,59.25,851.945,77.494C843.563,94.357,853.589,112.72,863.002,129.029C872.418,145.344,883.298,163.343,902.105,164.398" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path>
-              <path d="M242.3415221557144 401.8288616672583L141.47996749403754 289.81075679487134 29.461862621650567 390.6723114565482 130.32341728332742 502.69041632893516z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path>
-              <path d="M673.7341175009619 88.6262956492548L580.1562421558353 86.99288775926097 578.5228342658415 180.5707631043876 672.1007096109681 182.2041709943814z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float2"></path>
-              <path d="M1044.5843844148471 56.44694700686312L1092.9561949386625 85.51166302168672 1112.3673636989902-1.578410771448219z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float2"></path>
-              <path d="M260.499,465.956C305.748,469.51,353.111,452.52,376.175,413.429C399.546,373.818,392.136,323.688,367.262,285.003C344.36,249.386,302.835,234.4,260.499,233.528C216.247,232.617,166.77,241.446,145.839,280.445C125.566,318.218,149.99,360.966,172.529,397.433C193.474,431.321,220.783,462.836,260.499,465.956" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path>
-              <path d="M57.309,493.349C106.14,495.351,154.083,474.023,179.809,432.47C206.89,388.729,211.353,332.177,184.114,288.534C158.165,246.956,106.319,235.965,57.309,236.192C8.802,236.416,-43.507,247.528,-67.481,289.697C-91.261,331.525,-74.089,382.068,-48.95,423.094C-25.172,461.898,11.837,491.485,57.309,493.349" fill="rgba(28, 83, 142, 0.4)" class="triangle-float1"></path>
-            </g>
-            <defs>
-              <mask id="SvgjsMask1001">
-                <rect width="1440" height="560" fill="#ffffff"></rect>
-              </mask>
-            </defs>
-          </svg>
-        </div>
-        <div class="w-full lg:flex justify-between z-10">
-          <div class="w-full lg:w-[60%]">
-            <div data-aos="fade-down">
-              <h1 class="font-bold text-3xl lg:text-4xl bg-gradient-to-tr from-[#41326B] to-[#3B537F] bg-clip-text text-transparent pb-1">Tentang Saya</h1>
-              <p class="text-sm sm:text-base">Saat ini saya adalah seorang mahasiswa prodi Manajemen Informatika, Saya memiliki ketertarikan terhadap sebuah teknologi sejak sekolah dasar diantaranya editing video, desain, dan sekarang ke pembuatan sebuah aplikasi atau webiste.</p>
-              <div class="flex gap-5 text-2xl mt-1 items-center">
-                <p class="text-base">Follow :</p>
-                <a href="#" class="hover:text-indigo-700 cursor-pointer" target="_blank">
-                  <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="#" class="hover:text-indigo-700 cursor-pointer" target="_blank">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="#" class="hover:text-indigo-700 cursor-pointer" target="_blank">
-                  <i class="fa-brands fa-tiktok"></i>
-                </a>
-              </div>
-            </div>
-            <div data-aos="fade-right" class="mt-5">
-              <div class="flex gap-5">
-                <button id="btnTabSkills" class="font-bold cursor-pointer text-lg lg:text-xl border-b-2 border-indigo-700 text-indigo-700">Skill Pemrograman</button>
-                <button id="btnTabEducational" class="font-bold cursor-pointer text-lg lg:text-xl hover:text-gray-400 hover:border-b-2 hover:border-gray-400">Latar Pendidikan</button>
-              </div>
-              <div id="tabSkills" class="transition-opacity duration-500 ease-in-out opacity-100">
-                <p class="text-sm sm:text-base">Berikut adalah skill pemrograman yang saya pahami atau kuasai.</p>
-                <div class="flex items-center gap-5 overflow-x-auto lg:overflow-x-visible scrollbar-hide">
-                  <div class="text-center min-w-max">
-                    <img src="src/img/skills/html.png" alt="logohtml" class="w-[60px] mt-2" />
-                  </div>
-                  <div class="text-center min-w-max">
-                    <img src="src/img/skills/css.png" alt="logocss" class="w-[60px] mt-2" />
-                  </div>
-                  <div class="text-center min-w-max">
-                    <img src="src/img/skills/js.png" alt="logojs" class="w-[60px] mt-2" />
-                  </div>
-                  <div class="text-center min-w-max">
-                    <img src="src/img/skills/bootstrap.png" alt="logobootstrap" class="w-[70px] mt-1" />
-                  </div>
-                  <div class="text-center min-w-max">
-                    <img src="src/img/skills/tailwind.png" alt="logotailwind" class="w-[80px]" />
-                  </div>
-                  <div class="text-center min-w-max">
-                    <img src="src/img/skills/php.png" alt="logophp" class="w-[80px]" />
-                  </div>
-                  <div class="text-center min-w-max">
-                    <img src="src/img/skills/laravel.png" alt="logolaravel" class="w-[65px]" />
-                  </div>
-                </div>
-              </div>
-              <div id="tabEducational" class="transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none h-0 overflow-hidden">
-                <p class="text-sm sm:text-base">Berikut adalah riwayat latar belakang pendidikan yang saya tempuh.</p>
-                <div class="flex items-center gap-5">
-                  <div class="text-center h-22 flex flex-col justify-between">
-                    <img src="src/img/education/logosd.png" alt="logosd" class="w-[70px] grayscale hover:grayscale-0 transition" />
-                    <div class="text-xs">2011 - 2017</div>
-                  </div>
-                  <div class="text-center h-22 flex flex-col justify-between">
-                    <img src="src/img/education/logosmp.png" alt="logosd" class="w-[60px] mt-1 grayscale hover:grayscale-0 transition" />
-                    <div class="text-xs">2017 - 2020</div>
-                  </div>
-                  <div class="text-center h-22 flex flex-col justify-between">
-                    <img src="src/img/education/logosmk.png" alt="logosd" class="w-[60px] mt-1 grayscale hover:grayscale-0 transition" />
-                    <div class="text-xs">2020 - 2023</div>
-                  </div>
-                  <div class="text-center h-22 flex flex-col justify-between">
-                    <img src="src/img/education/logolp3i.png" alt="logosd" class="w-[70px]" />
-                    <div class="text-xs">2023 - Sekarang</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div data-aos="fade-up" class="mt-3">
-              <h1 class="font-bold text-xl">Quotes Saya</h1>
-              <div class="border border-dashed mt-1 rounded-xl px-5 lg:px-10 py-3">
-                <div class="flex justify-between items-center gap-5">
-                  <button id="btnPrevious" class="cursor-pointer hover:text-indigo-500">
-                    <i class="fa-solid fa-chevron-left"></i>
-                  </button>
-                  <div class="relative overflow-hidden h-[80px] w-full flex items-center mx-0 lg:mx-20">
-                    <!-- Quotes -->
-                    <div id="quote1" class="absolute w-full transition-opacity duration-500 ease-in-out opacity-100">
-                      <p class="text-center text-sm lg:text-base">"Pertahankan atau berkembang setiap harinya meskipun hanya sedikit dari hal kecil"</p>
-                    </div>
-                    <div id="quote2" class="absolute w-full transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none">
-                      <p class="text-center text-sm lg:text-base">"Jika gagal di salah satu bidang setidaknya berhasilah di bidang lain sebagai penggantinya."</p>
-                    </div>
-                    <div id="quote3" class="absolute w-full transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none">
-                      <p class="text-center text-sm lg:text-base">"Jangan sia-sia kan sesuatu hal yang telah kita pilih, lakukan yang terbaik yang bisa kita lakukan, jika tidak bisa maka ubahlah pilhannya."</p>
-                    </div>
-                    <div id="quote4" class="absolute w-full transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none">
-                      <p class="text-center text-sm lg:text-base">"Akan saya pastikan janji yang telah saya komit tidak akan berhenti atau gagal di saya"</p>
-                    </div>
-                    <div id="quote5" class="absolute w-full transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none">
-                      <p class="text-center text-sm lg:text-base">"Semua yang saya lakukan untuk masa depan adalah untuk membayar apa yang telah saya komit di masa lalu"</p>
-                    </div>
-                  </div>
-                  <button id="btnNext" class="cursor-pointer hover:text-indigo-500">
-                    <i class="fa-solid fa-chevron-right"></i>
-                  </button>
-                </div>
-                <div class="flex gap-4 justify-center mt-2">
-                  <button id="btnQuote1" class="bg-indigo-700 h-2 w-2 rounded-full cursor-pointer"></button>
-                  <button id="btnQuote2" class="bg-gray-400 h-2 w-2 rounded-full cursor-pointer"></button>
-                  <button id="btnQuote3" class="bg-gray-400 h-2 w-2 rounded-full cursor-pointer"></button>
-                  <button id="btnQuote4" class="bg-gray-400 h-2 w-2 rounded-full cursor-pointer"></button>
-                  <button id="btnQuote5" class="bg-gray-400 h-2 w-2 rounded-full cursor-pointer"></button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="relative w-full lg:w-[40%] flex justify-center lg:justify-end">
-            <div class="absolute top-5 lg:-top-10 z-10" data-aos="fade-down">
-              <div class="relative w-[250px] lg:w-[350px] overflow-hidden rounded-xl group">
-                <img src="src/img/logo.png" alt="logo" class="float-bounce w-full block rounded-xl h-fit" />
-                <div class="shine-effect absolute -top-20 rounded-xl pointer-events-none"></div>
-              </div>
-            </div>
-            <div data-aos="fade-up" class="z-20">
-              <img src="src/img/khikmal.png" alt="image" class="float-bounce mt-5 lg:mt-0 mb-20 lg:mb-0 w-[300px] lg:w-[400px] h-fit relative z-20 fade-out-bottom" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- My Project Section -->
-      <section id="myProjectSection" class="h-[100%] lg:h-screen bg-gray-50 text-gray-950 flex justify-center items-center p-5 lg:p-10 relative">
-        <div class="absolute left-0 right-0 top-0 bottom-0 overflow-x-hidden opacity-10">
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" class="h-[100%]" preserveAspectRatio="none" viewBox="0 0 1440 560">
-            <g mask='url("#SvgjsMask1000")' fill="none">
-              <rect width="1440" height="560" x="0" y="0" fill="#f9fafb"></rect>
-              <use xlink:href="#SvgjsSymbol1007" x="0" y="0"></use>
-              <use xlink:href="#SvgjsSymbol1007" x="720" y="0"></use>
-            </g>
-            <defs>
-              <mask id="SvgjsMask1000">
-                <rect width="1440" height="560" fill="#ffffff"></rect>
-              </mask>
-              <path d="M-1 0 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0z" id="SvgjsPath1006"></path>
-              <path d="M-3 0 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0z" id="SvgjsPath1003"></path>
-              <path d="M-5 0 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0z" id="SvgjsPath1004"></path>
-              <path d="M2 -2 L-2 2z" id="SvgjsPath1002"></path>
-              <path d="M6 -6 L-6 6z" id="SvgjsPath1001"></path>
-              <path d="M30 -30 L-30 30z" id="SvgjsPath1005"></path>
-            </defs>
-            <symbol id="SvgjsSymbol1007">
-              <use xlink:href="#SvgjsPath1001" x="30" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="30" y="90" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="30" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="30" y="210" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="30" y="270" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="30" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="30" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="30" y="450" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="30" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1005" x="30" y="570" stroke="#1c538e" stroke-width="3"></use>
-              <use xlink:href="#SvgjsPath1004" x="90" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="90" y="90" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="90" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1005" x="90" y="210" stroke="#1c538e" stroke-width="3"></use>
-              <use xlink:href="#SvgjsPath1001" x="90" y="270" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="90" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="90" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1005" x="90" y="450" stroke="#1c538e" stroke-width="3"></use>
-              <use xlink:href="#SvgjsPath1004" x="90" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="90" y="570" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="150" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1005" x="150" y="90" stroke="#1c538e" stroke-width="3"></use>
-              <use xlink:href="#SvgjsPath1004" x="150" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="150" y="210" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="150" y="270" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="150" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="150" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="150" y="450" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1006" x="150" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="150" y="570" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="210" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="210" y="90" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="210" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="210" y="210" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="210" y="270" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="210" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="210" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="210" y="450" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="210" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1006" x="210" y="570" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="270" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="270" y="90" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="270" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="270" y="210" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1006" x="270" y="270" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="270" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="270" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="270" y="450" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="270" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="270" y="570" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="330" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1006" x="330" y="90" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="330" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="330" y="210" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="330" y="270" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1006" x="330" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="330" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="330" y="450" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="330" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="330" y="570" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1006" x="390" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="390" y="90" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="390" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="390" y="210" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1005" x="390" y="270" stroke="#1c538e" stroke-width="3"></use>
-              <use xlink:href="#SvgjsPath1001" x="390" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="390" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="390" y="450" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="390" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="390" y="570" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="450" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="450" y="90" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="450" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="450" y="210" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="450" y="270" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="450" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="450" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="450" y="450" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="450" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="450" y="570" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="510" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="510" y="90" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="510" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="510" y="210" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1006" x="510" y="270" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="510" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="510" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="510" y="450" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="510" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1006" x="510" y="570" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="570" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="570" y="90" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="570" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="570" y="210" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="570" y="270" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="570" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="570" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="570" y="450" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="570" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="570" y="570" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="630" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="630" y="90" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="630" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1006" x="630" y="210" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1005" x="630" y="270" stroke="#1c538e" stroke-width="3"></use>
-              <use xlink:href="#SvgjsPath1003" x="630" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="630" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="630" y="450" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1006" x="630" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1002" x="630" y="570" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="690" y="30" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="690" y="90" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="690" y="150" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1006" x="690" y="210" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="690" y="270" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1003" x="690" y="330" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="690" y="390" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="690" y="450" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1004" x="690" y="510" stroke="#1c538e"></use>
-              <use xlink:href="#SvgjsPath1001" x="690" y="570" stroke="#1c538e"></use>
-            </symbol>
-          </svg>
-        </div>
-        <div class="flex flex-col-reverse md:flex-row justify-between w-full gap-5 z-10">
-          <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 p-4 items-start lg:items-center w-full">
-            <!-- Kiri -->
-            <div class="flex flex-col gap-4 float-bounce-reverse">
-              <div data-aos="fade-down-right" class="cursor-pointer group relative w-[175px] h-[270px] rounded-md bg-gray-300 overflow-hidden shadow" style="background-image: url('src/img/proyek/sirp/cover.jpg'); background-size: cover; background-position: start">
-                <!-- Hover overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="flex items-end h-full text-gray-50 p-3">
-                    <div>
-                      <p class="font-semibold text-sm leading-4">Sistem Informasi Relasi Perusahaan</p>
-                      <p class="text-xs">SIRP</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-aos="fade-up-right" class="cursor-pointer group relative w-[175px] h-[120px] rounded-md bg-gray-300 overflow-hidden shadow" style="background-image: url('src/img/proyek/sicontruct/cover.jpg'); background-size: cover; background-position: bottom center">
-                <!-- Hover overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="flex items-end h-full text-gray-50 p-3">
-                    <div>
-                      <p class="font-semibold text-xs leading-4">Program Aplikasi Informasi Kontruksi</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tengah -->
-            <div class="flex flex-col gap-4 float-bounce">
-              <div data-aos="fade-down" class="cursor-pointer group relative w-[175px] h-[120px] rounded-md bg-gray-300 overflow-hidden shadow" style="background-image: url('src/img/proyek/e_cash/cover.png'); background-size: cover; background-position: top center">
-                <!-- Hover overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="flex items-end h-full text-gray-50 p-3">
-                    <div>
-                      <p class="font-semibold text-xs leading-4">Pencatatan Keuangan Harian / KAS</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div data-aos="zoom-in" class="cursor-pointer group relative w-[175px] h-[270px] rounded-md bg-gray-300 overflow-hidden shadow" style="background-image: url('src/img/proyek/e_presencelcc/cover.jpg'); background-size: cover; background-position: start">
-                <!-- Hover overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="flex items-end h-full text-gray-50 p-3">
-                    <div>
-                      <p class="font-semibold text-sm leading-4">Program Aplikasi Kehadrian</p>
-                      <p class="text-xs">E-Presence</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div data-aos="fade-up" class="cursor-pointer group relative w-[175px] h-[120px] rounded-md bg-gray-300 overflow-hidden shadow" style="background-image: url('src/img/proyek/e_cashier/cover.jpg'); background-size: cover; background-position: bottom center">
-                <!-- Hover overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="flex items-end h-full text-gray-50 p-3">
-                    <div>
-                      <p class="font-semibold text-xs leading-4">Program Aplikasi Kasir</p>
-                      <p class="text-xs">E-Cashier</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Kanan -->
-            <div class="flex flex-col gap-4 float-bounce-reverse">
-              <div data-aos="fade-down-left" class="cursor-pointer group relative -mt-32 lg:mt-0 w-[175px] h-[120px] rounded-md bg-gray-300 overflow-hidden shadow" style="background-image: url('src/img/proyek/wedding/cover.png'); background-size: cover; background-position: top center">
-                <!-- Hover overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="flex items-end h-full text-gray-50 p-3">
-                    <div>
-                      <p class="font-semibold text-xs leading-4">Undangan Pernikahan Digital</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div data-aos="fade-up-left"
-                  class="cursor-pointer rotate-90 lg:rotate-0 ms-[50%] -mt-10 lg:mt-0 lg:ms-0 group relative w-[175px] h-[270px] rounded-md overflow-hidden shadow">
-
-                <!-- Latar belakang gambar tetap, tidak ikut rotasi -->
-                <div class="absolute inset-0 bg-left -rotate-90 lg:rotate-0 w-[270px] lg:w-full"
-                    style="background-image: url('src/img/proyek/hijab/cover.jpg'); background-size: cover;">
-                </div>
-
-                <!-- Hover overlay -->
-                <div class="absolute inset-0 -rotate-90 lg:rotate-0 w-[270px] lg:w-full bg-gradient-to-t from-[#030712] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="flex items-center lg:items-end h-full text-gray-50 p-3">
-                    <div>
-                      <p class="font-semibold text-xs leading-4">Sistem Informasi Pembelian dan Penjualan Hijab</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-aos="zoom-in-left" class="w-full">
-            <h1 class="font-bold text-3xl lg:text-4xl bg-gradient-to-tr from-[#41326B] to-[#3B537F] bg-clip-text text-transparent py-1">Proyek Saya</h1>
-            <p>Berikut adalah beberapa proyek website yang telah saya buat</p>
-
-            <div>
-              <div class="mt-5">
-                <div id="tabProject1">
-                  <div class="border-b border-gray-300 w-full py-3">
-                    <button id="btnRow1" class="flex cursor-pointer justify-between w-full items-center hover:text-indigo-700">
-                      <p class="font-medium">Sistem Informasi Relasi Perusahaan (SIRP)</p>
-                      <p><i id="iconRow1" class="fa-solid fa-chevron-down text-lg"></i></p>
-                    </button>
-                    <div id="contentRow1" class="hidden text-sm mt-2">
-                      <div>
-                        <h5 class="font-semibold">Deskripsi</h5>
-                        <p>Digunakan oleh LP3I Tasikmalaya untuk mencatat jumlah mahasiswa yang akan atau sudah ditempatkan kerja disebuah perusahaan.</p>
-                      </div>
-                      <div class="mt-2">
-                        <h5 class="font-semibold">Fitur:</h5>
-                        <ul>
-                          <li>- Master data mahasiswa dan perusahaan (bisa import atau export excel)</li>
-                          <li>- Pembagian hak akses</li>
-                          <li>- Pencatatan loker dari perusahaan</li>
-                          <li>- Pencatatan mahasiswa yang mengikuti loker tersebut</li>
-                          <li>- Pencatatan follow up perusahaan</li>
-                          <li>- Laporan mahasiswa yang sudah atau belum ditempatkan bekerja (cetak pdf atau excel)</li>
-                          <li>- Laporan follow up perusahaan yang masih aktif atau non aktif (cetak pdf atau excel)</li>
-                          <li>- Laporan perusahaan yang sudah MOU atau belum (cetak pdf atau excel)</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="border-b border-gray-300 w-full py-3 mt-2">
-                    <button id="btnRow2" class="flex cursor-pointer justify-between w-full items-center hover:text-indigo-700">
-                      <p class="font-medium">Program Aplikasi Kehadiran (E-Presence)</p>
-                      <p><i id="iconRow2" class="fa-solid fa-chevron-down text-lg"></i></p>
-                    </button>
-                    <div id="contentRow2" class="hidden text-sm mt-2">
-                      <div>
-                        <h5 class="font-semibold">Deskripsi</h5>
-                        <p>Digunakan oleh Organisasi UKM LCC LP3I Tasikmalaya untuk mencatat kehadiran mahasiswa yang mengikuti setiap kegiatan.</p>
-                      </div>
-                      <div class="mt-2">
-                        <h5 class="font-semibold">Fitur:</h5>
-                        <ul>
-                          <li>- Master data mahasiswa setiap angakatan</li>
-                          <li>- Pembagian hak akses</li>
-                          <li>- Pencatatan data kehadrian mahasiswa</li>
-                          <li>- Grafik kehadiran per-periode dan per-bulan</li>
-                          <li>- Grafik minat mahasiswa mengikuti kegiatan UKM</li>
-                          <li>- Laporan mahasiswa terajin per-kegiatan</li>
-                          <li>- Laporan mahasiswa aktif dan non aktif</li>
-                          <li>- Cetak laporan BAP (cetak pdf)</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="border-b border-gray-300 w-full py-3 mt-2">
-                    <button id="btnRow3" class="flex cursor-pointer justify-between w-full items-center hover:text-indigo-700">
-                      <p class="font-medium">Program Aplikasi Kasir (E-Cashier)</p>
-                      <p><i id="iconRow3" class="fa-solid fa-chevron-down text-lg"></i></p>
-                    </button>
-                    <div id="contentRow3" class="hidden text-sm mt-2">
-                      <div>
-                        <h5 class="font-semibold">Deskripsi</h5>
-                        <p>Website untuk UMKM yang membutuhkan program aplikasi kasir untuk mencatat setiap transaksi dan melihat laporan bulanan.</p>
-                      </div>
-                      <div class="mt-2">
-                        <h5 class="font-semibold">Fitur:</h5>
-                        <ul>
-                          <li>- Master data kategori dan produk</li>
-                          <li>- Pembagian hak akses</li>
-                          <li>- Pencatatan transaksi penjualan</li>
-                          <li>- Cetak struk transaksi</li>
-                          <li>- Grafik penjualan per-hari dan per-bulan</li>
-                          <li>- Laporan dan grafik produk terlaris</li>
-                          <li>- Laporan penjualan perbulan (cetak pdf dan excel)</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="border-b border-gray-300 w-full py-3 mt-2">
-                    <button id="btnRow4" class="flex cursor-pointer justify-between w-full items-center hover:text-indigo-700">
-                      <p class="font-medium">Sistem Informasi Pembelian dan Penjualan Hijab</p>
-                      <p><i id="iconRow4" class="fa-solid fa-chevron-down text-lg"></i></p>
-                    </button>
-                    <div id="contentRow4" class="hidden text-sm mt-2">
-                      <div>
-                        <h5 class="font-semibold">Deskripsi</h5>
-                        <p>Digunakan oleh perusahaan Bella Alisha Hijab untuk melihat informasi pembelian dan penjualan hijab.</p>
-                      </div>
-                      <div class="mt-2">
-                        <h5 class="font-semibold">Fitur:</h5>
-                        <ul>
-                          <li>- Master data kategori, produk, varian, ukuran, karyawan, pelanggan, status ketersediaan</li>
-                          <li>- Pembagian hak akses</li>
-                          <li>- Pencatatan stok produk masuk</li>
-                          <li>- Pencatatan transaksi penjualan dan stok keluar</li>
-                          <li>- Pencatatan pengeluaran</li>
-                          <li>- Pencatatan pemasukan / keuntungan</li>
-                          <li>- Laporan stok masuk dan stok keluar (cetak pdf atau excel)</li>
-                          <li>- Laporan keuangan per-bulan (cetak pdf atau excel)</li>
-                          <li>- Laporan hutang dan piutang (cetak pdf atau excel)</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="tabProject2" class="hidden">
-                  <div class="border-b border-gray-300 w-full py-3 mt-2">
-                    <button id="btnRow5" class="flex cursor-pointer justify-between w-full items-center hover:text-indigo-700">
-                      <p class="font-medium">Program Aplikasi Informasi Kontruksi</p>
-                      <p><i id="iconRow5" class="fa-solid fa-chevron-down text-lg"></i></p>
-                    </button>
-                    <div id="contentRow5" class="hidden text-sm mt-2">
-                      <div>
-                        <h5 class="font-semibold">Deskripsi</h5>
-                        <p>Program aplikasi untuk pencatatan pembelian material untuk sebuah kontruksi.</p>
-                      </div>
-                      <div class="mt-2">
-                        <h5 class="font-semibold">Fitur:</h5>
-                        <ul>
-                          <li>- Master data perusahaan, material, dan proyek</li>
-                          <li>- Pembagian hak akses</li>
-                          <li>- Pencatatan material yang digunakan pada proyek perusahaan</li>
-                          <li>- Grafik status proyek per-bulan</li>
-                          <li>- Grafik total anggaran proyek per-bulan</li>
-                          <li>- Laporan material dan anggaran proyek per-bulan (cetak pdf atau excel)</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="border-b border-gray-300 w-full py-3 mt-2">
-                    <button id="btnRow6" class="flex cursor-pointer justify-between w-full items-center hover:text-indigo-700">
-                      <p class="font-medium">Pencatatan Keuangan Harian / KAS</p>
-                      <p><i id="iconRow6" class="fa-solid fa-chevron-down text-lg"></i></p>
-                    </button>
-                    <div id="contentRow6" class="hidden text-sm mt-2">
-                      <div>
-                        <h5 class="font-semibold">Deskripsi</h5>
-                        <p>Digunakan untuk mencatatan keuangan pribadi guna melihat pengeluaran per-bulan.</p>
-                      </div>
-                      <div class="mt-2">
-                        <h5 class="font-semibold">Fitur:</h5>
-                        <ul>
-                          <li>- Master data kategori pengeluaran</li>
-                          <li>- Pembagian hak akses</li>
-                          <li>- Pencatatan pengeluaran</li>
-                          <li>- Laporan pengeluaran per-bulan</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="border-b border-gray-300 w-full py-3 mt-2">
-                    <button id="btnRow7" class="flex cursor-pointer justify-between w-full items-center hover:text-indigo-700">
-                      <p class="font-medium">Undangan Pernikahan Digital</p>
-                      <p><i id="iconRow7" class="fa-solid fa-chevron-down text-lg"></i></p>
-                    </button>
-                    <div id="contentRow7" class="hidden text-sm mt-2">
-                      <div>
-                        <h5 class="font-semibold">Deskripsi</h5>
-                        <p>Layout web undangan digital untuk acara pernikahan.</p>
-                      </div>
-                      <div class="mt-2">
-                        <h5 class="font-semibold">Fitur:</h5>
-                        <ul>
-                          <li>- Hitung mundur hari pernikahan</li>
-                          <li>- Kostum layout</li>
-                          <li>- Kostum backsound</li>
-                          <li>- Detail informasi pernikahan</li>
-                          <li>- Lokasi pernikahan via google map</li>
-                          <li>- Short Story</li>
-                          <li>- Galeri foto</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-8 flex justify-center gap-5">
-                <button id="btnProject1" class="border-t-4 w-16 cursor-pointer border-indigo-700"></button>
-                <button id="btnProject2" class="border-t-4 w-16 cursor-pointer border-gray-300"></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experienceSection" class="h-[100%] bg-gray-950 text-gray-50 p-5 lg:p-10 relative">
-        <div class="absolute left-0 right-0 top-0 bottom-0 overflow-x-hidden opacity-10">
+      <section id="aboutMeSection" class="h-[100%] lg:h-screen -mt-5 bg-gradient-to-b from-gray-950 to-indigo-950 text-gray-50 p-5 lg:p-10 flex justify-center items-center relative">
+        <div class="absolute left-0 right-0 top-0 bottom-0 overflow-x-hidden opacity-5">
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" class="h-[100%]" preserveAspectRatio="none" viewBox="0 0 1440 560">
             <g mask='url("#SvgjsMask1000")' fill="none">
               <rect width="1440" height="560" x="0" y="0" fill="#030712"></rect>
@@ -1088,54 +551,669 @@
             </defs>
           </svg>
         </div>
-        <div class="text-center" data-aos="fade-down">
-          <h1 class="font-bold text-3xl lg:text-4xl">Pengalaman</h1>
-          <p>Berikut adalah deskripsi pengalaman saya selama merintis karir di bidang informatika</p>
-        </div>
-        <div class="h-full flex justify-between mt-10">
-          <div class="w-full flex">
-            <div class="w-full border-r pr-4 text-end">
-              <div data-aos="fade-down-right">
-                <p class="mb-3 text-sm lg:text-base">2020 - 2023 adalah langkah awal saya dibidang Rekayasa Perangkat Lunak di SMK Negeri 3 Banjar, saya berlajar tentang dasar-dasar pemrograman web mulai dari database, desain layout, dan develop atau coding web. Semasa SMK juga saya aktif di organisasi menjadi sekretaris, disana saya belajar banyak seputar softskill, manajemen, dan skill administrasi.</p>
-                <div class="relative">
-                  <div class="absolute -right-2 -bottom-5">
-                    <img src="src/img/logorpl.png" alt="logorpl" class="w-24" />
+        <div class="w-full lg:flex justify-between z-10">
+          <div data-aos="fade-right" class="relative w-full lg:w-[45%] flex justify-center">
+            <div class="z-20 bg-indigo-900/20 flex items-end rounded-xl border-2 border-indigo-900/50">
+              <img src="src/img/khikmal.png" alt="image" class="mt-5 lg:mt-0 lg:mb-0 w-[350px] lg:w-[450px] h-fit relative z-20 scale-x-[-1]" />
+            </div>
+          </div>
+          <div data-aos="fade-left" class="w-full lg:w-[55%] mt-5 md:mt-0">
+            <div>
+              <h1 class="font-bold text-3xl lg:text-4xl text-indigo-600 pb-1">Tentang Saya</h1>
+              <p class="text-sm sm:text-base">Saat ini saya adalah seorang mahasiswa prodi Manajemen Informatika, Saya memiliki ketertarikan terhadap sebuah teknologi sejak sekolah dasar diantaranya editing video, desain, dan sekarang ke pembuatan sebuah aplikasi atau webiste.</p>
+              <!-- <div class="flex gap-5 text-2xl mt-1 items-center">
+        <p class="text-base">Follow :</p>
+        <a href="#" class="hover:text-indigo-700 cursor-pointer" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="#" class="hover:text-indigo-700 cursor-pointer" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="hover:text-indigo-700 cursor-pointer" target="_blank">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div> -->
+            </div>
+            <div class="mt-5">
+              <div class="flex gap-5">
+                <button id="btnTabSkills" class="font-bold cursor-pointer text-lg lg:text-xl border-b-2 border-indigo-500 text-indigo-500"><span class="hidden md:inline">Skill</span> Pemrograman</button>
+                <button id="btnTabAnother" class="font-bold cursor-pointer text-lg lg:text-xl hover:text-gray-400 hover:border-b-2 hover:border-gray-400">Software <span class="hidden md:inline">Lainnya</span></button>
+                <button id="btnTabEducational" class="font-bold cursor-pointer text-lg lg:text-xl hover:text-gray-400 hover:border-b-2 hover:border-gray-400"><span class="hidden md:inline">Latar</span> Pendidikan</button>
+              </div>
+              <div id="tabSkills" class="transition-opacity duration-500 ease-in-out opacity-100 mt-3">
+                <p class="text-sm sm:text-base">Berikut adalah skill pemrograman yang saya pahami atau kuasai.</p>
+                <div class="flex items-center gap-5 overflow-x-auto lg:overflow-x-visible scrollbar-hide">
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/html.png" alt="logohtml" class="w-[50px] mt-2 drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
                   </div>
-                  <div class="flex justify-end me-5">
-                    <img src="src/img/education/logosmk.png" alt="logoSmk" class="w-36" />
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/css.png" alt="logocss" class="w-[50px] mt-2 drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/js.png" alt="logojs" class="w-[50px] mt-2 drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/bootstrap.png" alt="logobootstrap" class="w-[60px] mt-1 drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/tailwind.png" alt="logotailwind" class="w-[70px] drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/php.png" alt="logophp" class="w-[70px] drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/laravel.png" alt="logolaravel" class="w-[55px] drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/mysql.png" alt="logomysql" class="w-[55px] drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
                   </div>
                 </div>
               </div>
-              <div data-aos="fade-down-right" class="mt-10">
-                <p class="mb-2 text-sm lg:text-base">2023 - Saat ini saya melanjutkan karir saya ke jenjang perguruan tinggi di Politeknik LP3I Kampus Tasikmalaya pada prodi Manajemen Informatika. Disini saya ingin memperdalami lebih lanjut apa yang telah saya dapatkan saat SMK. Saya juga aktif berorganisasi, pernah mengikuti beberapa lomba IT, dan mengerjakan beberapa freelance.</p>
-                <div class="flex justify-end -me-5">
-                  <img src="src/img/education/logolp3i.png" alt="logolp3i" class="w-40" />
+              <div id="tabAnother" class="transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none h-0 overflow-hidden">
+                <p class="text-sm sm:text-base">Berikut adalah skill software lainnya yang saya pahami atau kuasai.</p>
+                <div class="flex items-center gap-5 overflow-x-auto lg:overflow-x-visible scrollbar-hide">
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/MsWord.png" alt="logoWord" class="w-[60px] mt-2 drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/MsExcel.png" alt="logoExcel" class="w-[60px] mt-2 drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/MsPPT.png" alt="logoPPT" class="w-[60px] mt-2 drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/Figma.png" alt="logoFigma" class="w-[55px] mt-1 drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/Canva.png" alt="logoCanva" class="w-[55px] mt-1 drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/Pixellab.png" alt="logoPixellab" class="w-[55px] drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                  <div class="text-center min-w-max">
+                    <img src="src/img/skills/Capcut.png" alt="logoCapcut" class="w-[55px] drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                  </div>
+                </div>
+              </div>
+              <div id="tabEducational" class="transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none h-0 overflow-hidden">
+                <p class="text-sm sm:text-base">Berikut adalah riwayat latar belakang pendidikan yang saya tempuh.</p>
+                <div class="flex items-center gap-5 mt-2">
+                  <div class="text-center h-22 flex flex-col justify-between">
+                    <img src="src/img/education/logosd.png" alt="logosd" class="drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)] w-[70px] grayscale hover:grayscale-0 transition" />
+                    <div class="text-xs">2011 - 2017</div>
+                  </div>
+                  <div class="text-center h-22 flex flex-col justify-between">
+                    <img src="src/img/education/logosmp.png" alt="logosd" class="drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)] w-[60px] mt-1 grayscale hover:grayscale-0 transition" />
+                    <div class="text-xs">2017 - 2020</div>
+                  </div>
+                  <div class="text-center h-22 flex flex-col justify-between">
+                    <img src="src/img/education/logosmk.png" alt="logosd" class="drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)] w-[60px] mt-1 grayscale hover:grayscale-0 transition" />
+                    <div class="text-xs">2020 - 2023</div>
+                  </div>
+                  <div class="text-center h-22 flex flex-col justify-between">
+                    <img src="src/img/education/logolp3i.png" alt="logosd" class="w-[70px] drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]" />
+                    <div class="text-xs">2023 - Sekarang</div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="w-full border-l pl-4 pr-2">
-              <div data-aos="fade-up-left" class="mt-12">
-                <div>
-                  <img src="src/img/accessmedia.png" alt="logoaccess" class="w-40" />
-                </div>
-                <p class="text-sm lg:text-base">2022 saat memasuki kelas 11 SMK selama 3 bulan saya melaksanakan PKL di software house Access Media Tasikmalaya. Disana saya belajar bagaimana peluang bisnis dari bidang RPL ini dan juga saya turut membantu dalam pembuatan video tutorial penggunaan dari website atau aplikasi yang telah dibuat.</p>
-                <p class="text-sm lg:text-base">2024 memasuki perkuliahan saya kembali magang untuk mengisi waktu libur selama 2 bulan, saat itu saya belajar mengembangkan sebuah webiste yang sudah ada.</p>
-              </div>
-              <div data-aos="fade-up-left" class="mt-12">
-                <div class="relative">
-                  <div class="absolute left-6 -bottom-5">
-                    <img src="src/img/LogoLCC.png" alt="logolcc" class="w-36" />
+            <div class="mt-3">
+              <h1 class="font-bold text-xl">Quotes Saya</h1>
+              <div class="border border-dashed mt-1 rounded-xl px-5 lg:px-10 py-3">
+                <div class="flex justify-between items-center gap-5">
+                  <button id="btnPrevious" class="cursor-pointer hover:text-indigo-500">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <div class="relative overflow-hidden h-[80px] w-full flex items-center mx-0 lg:mx-20">
+                    <!-- Quotes -->
+                    <div id="quote1" class="absolute w-full transition-opacity duration-500 ease-in-out opacity-100">
+                      <p class="text-center text-sm lg:text-base">"Pertahankan atau berkembang setiap harinya meskipun hanya sedikit dari hal kecil"</p>
+                    </div>
+                    <div id="quote2" class="absolute w-full transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none">
+                      <p class="text-center text-sm lg:text-base">"Jika gagal di salah satu bidang setidaknya berhasillah di bidang lain sebagai penggantinya."</p>
+                    </div>
+                    <div id="quote3" class="absolute w-full transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none">
+                      <p class="text-center text-sm lg:text-base">"Jangan sia-sia kan sesuatu hal yang telah kita pilih, lakukan yang terbaik yang bisa kita lakukan, jika tidak bisa maka ubahlah pilhannya."</p>
+                    </div>
+                    <!-- <div id="quote4" class="absolute w-full transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none">
+              <p class="text-center text-sm lg:text-base">"Akan saya pastikan janji yang telah saya komit tidak akan berhenti atau gagal di saya"</p>
+            </div>
+            <div id="quote5" class="absolute w-full transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none">
+              <p class="text-center text-sm lg:text-base">"Semua yang saya lakukan untuk masa depan adalah untuk membayar apa yang telah saya komit di masa lalu"</p>
+            </div> -->
                   </div>
-                  <div class="-ms-5">
-                    <img src="src/img/education/logolp3i.png" alt="logolp3i" class="w-40" />
-                  </div>
+                  <button id="btnNext" class="cursor-pointer hover:text-indigo-500">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
                 </div>
-                <p class="mt-5 text-sm lg:text-base">Saya juga aktif kembali berorganisasi dibidang komputer yaitu UKM LCC sebagai Ketua, disini saya belajar lanjutan pengembangan dari softskill dan manajemen saya serta hardsklill saya salah satunya membuat sebuah webiste pencatatan kehadiran untuk setiap kegiatan UKM LCC.</p>
+                <div class="flex gap-4 justify-center mt-2">
+                  <button id="btnQuote1" class="bg-indigo-600 h-2 w-2 rounded-full cursor-pointer"></button>
+                  <button id="btnQuote2" class="bg-gray-400 h-2 w-2 rounded-full cursor-pointer"></button>
+                  <button id="btnQuote3" class="bg-gray-400 h-2 w-2 rounded-full cursor-pointer"></button>
+                  <!-- <button id="btnQuote4" class="bg-gray-400 h-2 w-2 rounded-full cursor-pointer"></button>
+          <button id="btnQuote5" class="bg-gray-400 h-2 w-2 rounded-full cursor-pointer"></button> -->
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Recent Project Section -->
+      <section id="myProjectSection" class="h-[100%] bg-gradient-to-b from-indigo-950 to-gray-950 text-gray-50 p-5 lg:p-10 flex justify-center items-center relative">
+        <div class="absolute left-0 right-0 top-0 bottom-0 overflow-x-hidden opacity-5">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" class="h-[100%]" preserveAspectRatio="none" viewBox="0 0 1440 560">
+            <g mask='url("#SvgjsMask1000")' fill="none">
+              <rect width="1440" height="560" x="0" y="0" fill="#030712"></rect>
+              <path
+                d="M83.44 97.3L148.4 134.8L148.4 209.8L83.44 247.3L18.49 209.8L18.49 134.8zM18.49 434.8L83.44 472.3L83.44 547.3L18.49 584.8L-46.46 547.3L-46.46 472.3zM213.35 322.3L278.31 359.8L278.31 434.8L213.35 472.3L148.4 434.8L148.4 359.8zM213.35 547.3L278.31 584.8L278.31 659.8L213.35 697.3L148.4 659.8L148.4 584.8zM278.31 -15.2L343.26 22.3L343.26 97.3L278.31 134.8L213.35 97.3L213.35 22.3zM343.26 322.3L408.21 359.8L408.21 434.8L343.26 472.3L278.31 434.8L278.31 359.8zM278.31 434.8L343.26 472.3L343.26 547.3L278.31 584.8L213.35 547.3L213.35 472.3zM473.17 97.3L538.12 134.8L538.12 209.8L473.17 247.3L408.21 209.8L408.21 134.8zM408.21 209.8L473.17 247.3L473.17 322.3L408.21 359.8L343.26 322.3L343.26 247.3zM538.12 -15.2L603.07 22.3L603.07 97.3L538.12 134.8L473.17 97.3L473.17 22.3zM538.12 209.8L603.07 247.3L603.07 322.3L538.12 359.8L473.17 322.3L473.17 247.3zM668.03 -15.2L732.98 22.3L732.98 97.3L668.03 134.8L603.07 97.3L603.07 22.3zM668.03 434.8L732.98 472.3L732.98 547.3L668.03 584.8L603.07 547.3L603.07 472.3zM862.89 97.3L927.84 134.8L927.84 209.8L862.89 247.3L797.93 209.8L797.93 134.8zM862.89 547.3L927.84 584.8L927.84 659.8L862.89 697.3L797.93 659.8L797.93 584.8zM1057.75 -15.2L1122.7 22.3L1122.7 97.3L1057.75 134.8L992.8 97.3L992.8 22.3zM1122.7 97.3L1187.66 134.8L1187.66 209.8L1122.7 247.3L1057.75 209.8L1057.75 134.8zM1187.66 209.8L1252.61 247.3L1252.61 322.3L1187.66 359.8L1122.7 322.3L1122.7 247.3zM1187.66 434.8L1252.61 472.3L1252.61 547.3L1187.66 584.8L1122.7 547.3L1122.7 472.3zM1252.61 547.3L1317.56 584.8L1317.56 659.8L1252.61 697.3L1187.66 659.8L1187.66 584.8zM1317.57 -15.2L1382.52 22.3L1382.52 97.3L1317.57 134.8L1252.61 97.3L1252.61 22.3zM1382.52 97.3L1447.47 134.8L1447.47 209.8L1382.52 247.3L1317.57 209.8L1317.57 134.8zM1382.52 322.3L1447.47 359.8L1447.47 434.8L1382.52 472.3L1317.57 434.8L1317.57 359.8zM1512.43 322.3L1577.38 359.8L1577.38 434.8L1512.43 472.3L1447.47 434.8L1447.47 359.8zM1447.47 434.8L1512.43 472.3L1512.43 547.3L1447.47 584.8L1382.52 547.3L1382.52 472.3zM1512.43 547.3L1577.38 584.8L1577.38 659.8L1512.43 697.3L1447.47 659.8L1447.47 584.8z"
+                stroke="#03305d"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M75.94 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM75.94 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM10.99 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM10.99 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM10.99 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM75.94 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM75.94 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM10.99 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM-53.96 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM-53.96 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 697.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 -15.2 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM400.71 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM400.71 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM465.67 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM530.62 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM530.62 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM465.67 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM400.71 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM400.71 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM465.67 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM530.62 -15.2 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM465.67 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM530.62 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM660.53 -15.2 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM725.48 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM725.48 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM660.53 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM660.53 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM725.48 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM725.48 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM660.53 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM855.39 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM920.34 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM920.34 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM855.39 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM790.43 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM790.43 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM855.39 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM920.34 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM920.34 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM855.39 697.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM790.43 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM790.43 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1050.25 -15.2 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1050.25 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM985.3 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM985.3 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1050.25 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.06 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.06 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 697.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.07 -15.2 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.07 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.07 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.07 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.07 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1504.93 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1569.88 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1569.88 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1504.93 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1504.93 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1569.88 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1569.88 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1504.93 697.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0z"
+                fill="#03305d"
+              ></path>
+              <path
+                d="M27.87 -2L71.17 23L71.17 73L27.87 98L-15.43 73L-15.43 23zM71.17 73L114.48 98L114.48 148L71.17 173L27.87 148L27.87 98zM27.87 148L71.17 173L71.17 223L27.87 248L-15.43 223L-15.43 173zM71.17 223L114.48 248L114.48 298L71.17 323L27.87 298L27.87 248zM71.17 523L114.48 548L114.48 598L71.17 623L27.87 598L27.87 548zM157.78 73L201.08 98L201.08 148L157.78 173L114.48 148L114.48 98zM114.48 148L157.78 173L157.78 223L114.48 248L71.17 223L71.17 173zM330.99 373L374.29 398L374.29 448L330.99 473L287.69 448L287.69 398zM374.29 -2L417.59 23L417.59 73L374.29 98L330.99 73L330.99 23zM374.29 148L417.59 173L417.59 223L374.29 248L330.99 223L330.99 173zM374.29 448L417.59 473L417.59 523L374.29 548L330.99 523L330.99 473zM460.9 448L504.2 473L504.2 523L460.9 548L417.59 523L417.59 473zM547.5 448L590.8 473L590.8 523L547.5 548L504.2 523L504.2 473zM634.11 -2L677.41 23L677.41 73L634.11 98L590.8 73L590.8 23zM634.11 148L677.41 173L677.41 223L634.11 248L590.8 223L590.8 173zM677.41 373L720.71 398L720.71 448L677.41 473L634.11 448L634.11 398zM764.01 73L807.32 98L807.32 148L764.01 173L720.71 148L720.71 98zM720.71 148L764.01 173L764.01 223L720.71 248L677.41 223L677.41 173zM850.62 223L893.92 248L893.92 298L850.62 323L807.32 298L807.32 248zM807.32 448L850.62 473L850.62 523L807.32 548L764.01 523L764.01 473zM850.62 523L893.92 548L893.92 598L850.62 623L807.32 598L807.32 548zM893.92 -2L937.22 23L937.22 73L893.92 98L850.62 73L850.62 23zM893.92 448L937.22 473L937.22 523L893.92 548L850.62 523L850.62 473zM980.53 -2L1023.83 23L1023.83 73L980.53 98L937.22 73L937.22 23zM1023.83 73L1067.13 98L1067.13 148L1023.83 173L980.53 148L980.53 98zM980.53 298L1023.83 323L1023.83 373L980.53 398L937.22 373L937.22 323zM1023.83 373L1067.13 398L1067.13 448L1023.83 473L980.53 448L980.53 398zM1110.43 73L1153.73 98L1153.73 148L1110.43 173L1067.13 148L1067.13 98zM1067.13 148L1110.43 173L1110.43 223L1067.13 248L1023.83 223L1023.83 173zM1110.43 223L1153.73 248L1153.73 298L1110.43 323L1067.13 298L1067.13 248zM1110.43 523L1153.73 548L1153.73 598L1110.43 623L1067.13 598L1067.13 548zM1153.73 148L1197.04 173L1197.04 223L1153.73 248L1110.43 223L1110.43 173zM1153.73 298L1197.04 323L1197.04 373L1153.73 398L1110.43 373L1110.43 323zM1370.25 73L1413.55 98L1413.55 148L1370.25 173L1326.94 148L1326.94 98zM1370.25 223L1413.55 248L1413.55 298L1370.25 323L1326.94 298L1326.94 248zM1370.25 373L1413.55 398L1413.55 448L1370.25 473L1326.94 448L1326.94 398zM1326.94 448L1370.25 473L1370.25 523L1326.94 548L1283.64 523L1283.64 473zM1456.85 73L1500.15 98L1500.15 148L1456.85 173L1413.55 148L1413.55 98z"
+                stroke="rgba(6, 80, 156, 0.93)"
+                stroke-width="2"
+              ></path>
+            </g>
+            <defs>
+              <mask id="SvgjsMask1000">
+                <rect width="1440" height="560" fill="#ffffff"></rect>
+              </mask>
+            </defs>
+          </svg>
+        </div>
+        <div class="w-full mt-10 md:mt-0">
+          <div class="mb-8 text-center">
+            <div class="w-full flex justify-center">
+              <p class="uppercase text-lg w-fit tracking-widest bg-gray-600/50 rounded-md text-indigo-400 px-3 py-1 font-semibold">Riwayat</p>
+            </div>
+            <h2 class="text-2xl lg:text-4xl font-bold">Project Website</h2>
+          </div>
+
+          <!-- Project Cards -->
+          <div class="flex gap-3 md:gap-5 overflow-x-auto project-scrollbar pb-5">
+            <!-- Project Card 1 -->
+            <div class="bg-gray-800/60 border border-indigo-900/50 rounded-xl shadow-lg w-[330px] md:w-[350px] flex-shrink-0 group overflow-hidden">
+              <div class="relative overflow-hidden">
+                <img src="src/img/proyek/e_presencelcc/cover.jpg" alt="Project 1" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <a href="#" class="bg-indigo-600 p-3 rounded-full hover:bg-indigo-700 transition h-10 w-10 flex items-center justify-center drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold text-lg leading-5">E-Presence UKM LCC</h3>
+                <p class="text-sm text-gray-400">Pencatatan Absensi Kegiatan Organisasi Kampus</p>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="bg-gray-800/60 border border-indigo-900/50 rounded-xl shadow-lg w-[330px] md:w-[350px] flex-shrink-0 group overflow-hidden">
+              <div class="relative overflow-hidden">
+                <img src="src/img/proyek/sirp/cover.jpg" alt="Project 2" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <a href="#" class="bg-indigo-600 p-3 rounded-full hover:bg-indigo-700 transition h-10 w-10 flex items-center justify-center drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold leading-5">Sistem Informasi Relasi Perusahaan (SIRP)</h3>
+                <p class="text-sm text-gray-400">Manajemen Penempatan Kerja LP3I Tasikmalaya</p>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="bg-gray-800/60 border border-indigo-900/50 rounded-xl shadow-lg w-[330px] md:w-[350px] flex-shrink-0 group overflow-hidden">
+              <div class="relative overflow-hidden">
+                <img src="src/img/proyek/e_cashier/cover.png" alt="Project 3" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <a href="#" class="bg-indigo-600 p-3 rounded-full hover:bg-indigo-700 transition h-10 w-10 flex items-center justify-center drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold leading-5">Program Aplikasi Penjualan (E-Cashier)</h3>
+                <p class="text-sm text-gray-400">Website Kasir Untuk UMKM</p>
+              </div>
+            </div>
+            <!-- Project Card 1 -->
+            <div class="bg-gray-800/60 border border-indigo-900/50 rounded-xl shadow-lg w-[330px] md:w-[350px] flex-shrink-0 group overflow-hidden">
+              <div class="relative overflow-hidden">
+                <img src="src/img/proyek/siretas/cover.png" alt="Project 1" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <a href="#" class="bg-indigo-600 p-3 rounded-full hover:bg-indigo-700 transition h-10 w-10 flex items-center justify-center drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold leading-5">Sistem Informasi Parentas (SiRetas)</h3>
+                <p class="text-sm text-gray-400">Landing Page Informasi Desa Parentas</p>
+              </div>
+            </div>
+
+            <!-- Project Card 5 -->
+            <div class="bg-gray-800/60 border border-indigo-900/50 rounded-xl shadow-lg w-[330px] md:w-[350px] flex-shrink-0 group overflow-hidden">
+              <div class="relative overflow-hidden">
+                <img src="src/img/proyek/sicontruct/cover.png" alt="Project 5" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <a href="#" class="bg-indigo-600 p-3 rounded-full hover:bg-indigo-700 transition h-10 w-10 flex items-center justify-center drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold text-lg leading-5">Sistem Informasi Kontruksi</h3>
+                <p class="text-sm text-gray-400">Proyek Tugas Kuliah, Manajemen Kontruksi</p>
+              </div>
+            </div>
+
+            <!-- Project Card 6 -->
+            <div class="bg-gray-800/60 border border-indigo-900/50 rounded-xl shadow-lg w-[330px] md:w-[350px] flex-shrink-0 group overflow-hidden">
+              <div class="relative overflow-hidden">
+                <img src="src/img/proyek/hijab/cover.jpg" alt="Project 6" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <a href="#" class="bg-indigo-600 p-3 rounded-full hover:bg-indigo-700 transition h-10 w-10 flex items-center justify-center drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold text-lg leading-5">Sistem Informasi Toko Hijab</h3>
+                <p class="text-sm text-gray-400">Proyek Tertunda, Manajemen Produk Hijab</p>
+              </div>
+            </div>
+            <!-- Project Card 7 -->
+            <div class="bg-gray-800/60 border border-indigo-900/50 rounded-xl shadow-lg w-[330px] md:w-[350px] flex-shrink-0 group overflow-hidden">
+              <div class="relative overflow-hidden">
+                <img src="src/img/proyek/klinik_hewan/cover.png" alt="Project 7" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <a href="#" class="bg-indigo-600 p-3 rounded-full hover:bg-indigo-700 transition h-10 w-10 flex items-center justify-center drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold text-lg leading-5">Klinik Hewan</h3>
+                <p class="text-sm text-gray-400">Proyek Internship, Manajemen Klinik Hewan</p>
+              </div>
+            </div>
+            <!-- Project Card 8 -->
+            <div class="bg-gray-800/60 border border-indigo-900/50 rounded-xl shadow-lg w-[330px] md:w-[350px] flex-shrink-0 group overflow-hidden">
+              <div class="relative overflow-hidden">
+                <img src="src/img/proyek/e_cash/dahboard.png" alt="Project 8" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <a href="#" class="bg-indigo-600 p-3 rounded-full hover:bg-indigo-700 transition h-10 w-10 flex items-center justify-center drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold text-lg leading-5">Pencatatan Keuangan Harian</h3>
+                <p class="text-sm text-gray-400">Manajemen Pengeluaran Pemasukan Keuangan</p>
+              </div>
+            </div>
+            <!-- Project Card 9 -->
+            <div class="bg-gray-800/60 border border-indigo-900/50 rounded-xl shadow-lg w-[330px] md:w-[350px] flex-shrink-0 group overflow-hidden">
+              <div class="relative overflow-hidden">
+                <img src="src/img/proyek/wedding/cover.png" alt="Project 9" class="w-full h-48 object-cover object-top transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <a href="#" class="bg-indigo-600 p-3 rounded-full hover:bg-indigo-700 transition h-10 w-10 flex items-center justify-center drop-shadow-[0_2px_5px_rgba(209,213,219,0.8)]">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold text-lg leading-5">Undangan Pernikahan Digital</h3>
+                <p class="text-sm text-gray-400">Web Undangan Pernikahan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="bg-gradient-to-b from-gray-950 to-indigo-950 text-gray-50 p-5 lg:p-14 relative overflow-hidden">
+        <div class="absolute left-0 right-0 top-0 bottom-0 overflow-x-hidden opacity-5">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" class="h-[100%]" preserveAspectRatio="none" viewBox="0 0 1440 560">
+            <g mask='url("#SvgjsMask1000")' fill="none">
+              <rect width="1440" height="560" x="0" y="0" fill="#030712"></rect>
+              <path
+                d="M83.44 97.3L148.4 134.8L148.4 209.8L83.44 247.3L18.49 209.8L18.49 134.8zM18.49 434.8L83.44 472.3L83.44 547.3L18.49 584.8L-46.46 547.3L-46.46 472.3zM213.35 322.3L278.31 359.8L278.31 434.8L213.35 472.3L148.4 434.8L148.4 359.8zM213.35 547.3L278.31 584.8L278.31 659.8L213.35 697.3L148.4 659.8L148.4 584.8zM278.31 -15.2L343.26 22.3L343.26 97.3L278.31 134.8L213.35 97.3L213.35 22.3zM343.26 322.3L408.21 359.8L408.21 434.8L343.26 472.3L278.31 434.8L278.31 359.8zM278.31 434.8L343.26 472.3L343.26 547.3L278.31 584.8L213.35 547.3L213.35 472.3zM473.17 97.3L538.12 134.8L538.12 209.8L473.17 247.3L408.21 209.8L408.21 134.8zM408.21 209.8L473.17 247.3L473.17 322.3L408.21 359.8L343.26 322.3L343.26 247.3zM538.12 -15.2L603.07 22.3L603.07 97.3L538.12 134.8L473.17 97.3L473.17 22.3zM538.12 209.8L603.07 247.3L603.07 322.3L538.12 359.8L473.17 322.3L473.17 247.3zM668.03 -15.2L732.98 22.3L732.98 97.3L668.03 134.8L603.07 97.3L603.07 22.3zM668.03 434.8L732.98 472.3L732.98 547.3L668.03 584.8L603.07 547.3L603.07 472.3zM862.89 97.3L927.84 134.8L927.84 209.8L862.89 247.3L797.93 209.8L797.93 134.8zM862.89 547.3L927.84 584.8L927.84 659.8L862.89 697.3L797.93 659.8L797.93 584.8zM1057.75 -15.2L1122.7 22.3L1122.7 97.3L1057.75 134.8L992.8 97.3L992.8 22.3zM1122.7 97.3L1187.66 134.8L1187.66 209.8L1122.7 247.3L1057.75 209.8L1057.75 134.8zM1187.66 209.8L1252.61 247.3L1252.61 322.3L1187.66 359.8L1122.7 322.3L1122.7 247.3zM1187.66 434.8L1252.61 472.3L1252.61 547.3L1187.66 584.8L1122.7 547.3L1122.7 472.3zM1252.61 547.3L1317.56 584.8L1317.56 659.8L1252.61 697.3L1187.66 659.8L1187.66 584.8zM1317.57 -15.2L1382.52 22.3L1382.52 97.3L1317.57 134.8L1252.61 97.3L1252.61 22.3zM1382.52 97.3L1447.47 134.8L1447.47 209.8L1382.52 247.3L1317.57 209.8L1317.57 134.8zM1382.52 322.3L1447.47 359.8L1447.47 434.8L1382.52 472.3L1317.57 434.8L1317.57 359.8zM1512.43 322.3L1577.38 359.8L1577.38 434.8L1512.43 472.3L1447.47 434.8L1447.47 359.8zM1447.47 434.8L1512.43 472.3L1512.43 547.3L1447.47 584.8L1382.52 547.3L1382.52 472.3zM1512.43 547.3L1577.38 584.8L1577.38 659.8L1512.43 697.3L1447.47 659.8L1447.47 584.8z"
+                stroke="#03305d"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M75.94 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM75.94 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM10.99 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM10.99 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM10.99 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM75.94 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM75.94 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM10.99 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM-53.96 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM-53.96 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 697.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM140.9 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 -15.2 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM270.81 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM205.85 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM400.71 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM400.71 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM465.67 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM530.62 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM530.62 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM465.67 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM400.71 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM400.71 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM465.67 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM335.76 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM530.62 -15.2 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM465.67 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM530.62 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM660.53 -15.2 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM725.48 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM725.48 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM660.53 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM660.53 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM725.48 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM725.48 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM660.53 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM595.57 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM855.39 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM920.34 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM920.34 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM855.39 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM790.43 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM790.43 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM855.39 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM920.34 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM920.34 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM855.39 697.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM790.43 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM790.43 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1050.25 -15.2 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1050.25 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM985.3 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM985.3 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1050.25 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1115.2 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.06 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.06 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 697.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1180.16 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.07 -15.2 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.07 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 97.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1245.11 22.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 134.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 247.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.07 209.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.07 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1310.07 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1504.93 322.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1569.88 359.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1569.88 434.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1504.93 472.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1504.93 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1375.02 547.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1569.88 584.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1569.88 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1504.93 697.3 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1439.97 659.8 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0z"
+                fill="#03305d"
+              ></path>
+              <path
+                d="M27.87 -2L71.17 23L71.17 73L27.87 98L-15.43 73L-15.43 23zM71.17 73L114.48 98L114.48 148L71.17 173L27.87 148L27.87 98zM27.87 148L71.17 173L71.17 223L27.87 248L-15.43 223L-15.43 173zM71.17 223L114.48 248L114.48 298L71.17 323L27.87 298L27.87 248zM71.17 523L114.48 548L114.48 598L71.17 623L27.87 598L27.87 548zM157.78 73L201.08 98L201.08 148L157.78 173L114.48 148L114.48 98zM114.48 148L157.78 173L157.78 223L114.48 248L71.17 223L71.17 173zM330.99 373L374.29 398L374.29 448L330.99 473L287.69 448L287.69 398zM374.29 -2L417.59 23L417.59 73L374.29 98L330.99 73L330.99 23zM374.29 148L417.59 173L417.59 223L374.29 248L330.99 223L330.99 173zM374.29 448L417.59 473L417.59 523L374.29 548L330.99 523L330.99 473zM460.9 448L504.2 473L504.2 523L460.9 548L417.59 523L417.59 473zM547.5 448L590.8 473L590.8 523L547.5 548L504.2 523L504.2 473zM634.11 -2L677.41 23L677.41 73L634.11 98L590.8 73L590.8 23zM634.11 148L677.41 173L677.41 223L634.11 248L590.8 223L590.8 173zM677.41 373L720.71 398L720.71 448L677.41 473L634.11 448L634.11 398zM764.01 73L807.32 98L807.32 148L764.01 173L720.71 148L720.71 98zM720.71 148L764.01 173L764.01 223L720.71 248L677.41 223L677.41 173zM850.62 223L893.92 248L893.92 298L850.62 323L807.32 298L807.32 248zM807.32 448L850.62 473L850.62 523L807.32 548L764.01 523L764.01 473zM850.62 523L893.92 548L893.92 598L850.62 623L807.32 598L807.32 548zM893.92 -2L937.22 23L937.22 73L893.92 98L850.62 73L850.62 23zM893.92 448L937.22 473L937.22 523L893.92 548L850.62 523L850.62 473zM980.53 -2L1023.83 23L1023.83 73L980.53 98L937.22 73L937.22 23zM1023.83 73L1067.13 98L1067.13 148L1023.83 173L980.53 148L980.53 98zM980.53 298L1023.83 323L1023.83 373L980.53 398L937.22 373L937.22 323zM1023.83 373L1067.13 398L1067.13 448L1023.83 473L980.53 448L980.53 398zM1110.43 73L1153.73 98L1153.73 148L1110.43 173L1067.13 148L1067.13 98zM1067.13 148L1110.43 173L1110.43 223L1067.13 248L1023.83 223L1023.83 173zM1110.43 223L1153.73 248L1153.73 298L1110.43 323L1067.13 298L1067.13 248zM1110.43 523L1153.73 548L1153.73 598L1110.43 623L1067.13 598L1067.13 548zM1153.73 148L1197.04 173L1197.04 223L1153.73 248L1110.43 223L1110.43 173zM1153.73 298L1197.04 323L1197.04 373L1153.73 398L1110.43 373L1110.43 323zM1370.25 73L1413.55 98L1413.55 148L1370.25 173L1326.94 148L1326.94 98zM1370.25 223L1413.55 248L1413.55 298L1370.25 323L1326.94 298L1326.94 248zM1370.25 373L1413.55 398L1413.55 448L1370.25 473L1326.94 448L1326.94 398zM1326.94 448L1370.25 473L1370.25 523L1326.94 548L1283.64 523L1283.64 473zM1456.85 73L1500.15 98L1500.15 148L1456.85 173L1413.55 148L1413.55 98z"
+                stroke="rgba(6, 80, 156, 0.93)"
+                stroke-width="2"
+              ></path>
+            </g>
+            <defs>
+              <mask id="SvgjsMask1000">
+                <rect width="1440" height="560" fill="#ffffff"></rect>
+              </mask>
+            </defs>
+          </svg>
+        </div>
+        <div class="relative z-10 max-w-6xl mx-auto space-y-10">
+          <div class="text-center">
+            <p class="uppercase tracking-[0.35em] text-sm md:text-base text-indigo-400 font-semibold">Experience</p>
+            <h2 class="mt-2 text-2xl md:text-4xl font-bold">Pengalaman Magang &amp; Organisasi</h2>
+            <p class="mt-3 text-sm md:text-base text-gray-300 max-w-3xl mx-auto">Ringkasan perjalanan profesional serta kontribusi saya di berbagai organisasi dan perusahaan.</p>
+          </div>
+
+          <div>
+            <div class="flex gap-5">
+              <button id="btnTabMagang" class="font-bold cursor-pointer text-lg lg:text-xl border-b-2 border-indigo-500 text-indigo-500"><span class="hidden md:inline">Pengalaman</span> Magang</button>
+              <button id="btnTabOrganisasi" class="font-bold cursor-pointer text-lg lg:text-xl hover:text-gray-400 hover:border-b-2 hover:border-gray-400"><span class="hidden md:inline">Pengalaman</span> Organisasi</button>
+            </div>
+            <div id="tabMagang" class="transition-opacity duration-500 ease-in-out opacity-100 mt-5">
+              <div class="space-y-6">
+                <article class="group bg-gray-900/50 border border-indigo-900/30 rounded-2xl shadow-xl overflow-hidden">
+                  <div class="flex flex-col md:flex-row">
+                    <div class="md:w-[260px] bg-gradient-to-br from-indigo-500/70 via-indigo-400/60 to-sky-500/70 p-6 md:p-8 text-gray-50">
+                      <span class="uppercase text-xs tracking-[0.35em] text-white/65">Full Time</span>
+                      <h3 class="mt-4 text-2xl font-bold">Web Developer</h3>
+                      <p class="mt-2 text-sm font-semibold text-white/80">CV. Access Media - Tasikmalaya</p>
+                      <p class="mt-6 text-sm leading-relaxed text-white/75">September 2025 - Saat Ini</p>
+                    </div>
+                    <div class="flex-1 p-6 md:p-8 bg-gray-950/70">
+                      <h4 class="text-xl md:text-2xl font-semibold">Deskripsi Kegiatan</h4>
+                      <p class="mt-4 text-sm md:text-base text-gray-300 leading-relaxed">Merupakan program Kuliah Kerja Industri (KKI) atau magang yang diadakan oleh Politeknik LP3I Kampus Tasikmalaya program studi D3 Manajemen Informatika pada semester 5.</p>
+                      <ul class="mt-5 space-y-2 text-sm md:text-base text-gray-300">
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Membantu mengembangkan fitur-fitur situs web sistem informasi klinik hewan.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+                <article class="group bg-gray-900/50 border border-indigo-900/30 rounded-2xl shadow-xl overflow-hidden">
+                  <div class="flex flex-col md:flex-row">
+                    <div class="md:w-[260px] bg-gradient-to-br from-indigo-500/70 via-indigo-400/60 to-sky-500/70 p-6 md:p-8 text-gray-50">
+                      <span class="uppercase text-xs tracking-[0.35em] text-white/65">Full Time</span>
+                      <h3 class="mt-4 text-2xl font-bold">Web Developer</h3>
+                      <p class="mt-2 text-sm font-semibold text-white/80">CV. Access Media - Tasikmalaya</p>
+                      <p class="mt-6 text-sm leading-relaxed text-white/75">Juli 2024 - Agustus 2024</p>
+                    </div>
+                    <div class="flex-1 p-6 md:p-8 bg-gray-950/70">
+                      <h4 class="text-xl md:text-2xl font-semibold">Deskripsi Kegiatan</h4>
+                      <p class="mt-4 text-sm md:text-base text-gray-300 leading-relaxed">Mengisi waktu libur semester genap semasa kuliah selama 2 bulan. Berpengalaman dalam membantu pengembangan fitur pada situs web sistem informasi, termasuk fitur kehadiran dan pemindaian barcode produk. Selain itu, juga berkontribusi dalam memberikan edukasi serta berbagi pengetahuan mengenai pemrograman web kepada siswa PKL.</p>
+                      <ul class="mt-5 space-y-2 text-sm md:text-base text-gray-300">
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Membantu mengembangkan fitur-fitur situs web sistem informasi kehadiran, </span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Membantu mengembangkan fitur pemindaian kode batang produk pada situs web informasi toko,</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span> Memberikan edukasi dan berbagi pengetahuan tentang pemrograman web kepada mahasiswa PKL.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+                <article class="group bg-gray-900/60 border border-indigo-900/40 rounded-2xl shadow-xl overflow-hidden">
+                  <div class="flex flex-col md:flex-row">
+                    <div class="md:w-[260px] bg-gradient-to-br from-indigo-600/80 via-indigo-500/70 to-sky-600/80 p-6 md:p-8 text-gray-50">
+                      <span class="uppercase text-xs tracking-[0.35em] text-white/70">Full Time</span>
+                      <h3 class="mt-4 text-2xl font-bold">IT Support</h3>
+                      <p class="mt-1 text-sm font-semibold text-white/80">CV. Access Media - Tasikmalaya</p>
+                      <p class="mt-6 text-sm leading-relaxed text-white/75">Februari 2022 - April 2022</p>
+                    </div>
+                    <div class="flex-1 p-6 md:p-8 bg-gray-950/70">
+                      <h4 class="text-xl md:text-2xl font-semibold">Deskripsi Kegiatan</h4>
+                      <p class="mt-4 text-sm md:text-base text-gray-300 leading-relaxed">Merupakan program Praktik Kerja Lapangan (PKL) selama 3 bulan saat SMK. Berpengalaman dalam penginputan data produk ke aplikasi dan Excel, membuat video tutorial penggunaan aplikasi, serta mengembangkan aplikasi Sistem Informasi Warung Koperasi Sekolah berbasis desktop sebagai tugas project sekolah.</p>
+                      <ul class="mt-5 space-y-2 text-sm md:text-base text-gray-300">
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Penginputan data produk ke dalam aplikasi sistem informasi toko kelontong, </span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Penginputan data induk produk ke dalam Excel,</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Membuat video tutorial penggunaan aplikasi sistem informasi toko kelontong,</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Membuat aplikasi Sistem Informasi Warung Koperasi Sekolah berbasis desktop.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div id="tabOrganisasi" class="hidden transition-opacity duration-500 ease-in-out opacity-100 mt-5">
+              <div class="space-y-6">
+                <article class="group bg-gray-900/60 border border-indigo-900/40 rounded-2xl shadow-xl overflow-hidden">
+                  <div class="flex flex-col-reverse md:flex-row">
+                    <div class="flex-1 p-6 md:p-8 bg-gray-950/70">
+                      <h4 class="text-xl md:text-2xl font-semibold">Deskripsi Kegiatan</h4>
+                      <p class="mt-4 text-sm md:text-base text-gray-300 leading-relaxed">Berpengalaman sebagai Ketua UKM LCC, bertanggung jawab dalam menyusun program kerja, mengelola kegiatan organisasi, melatih anggota di bidang komputer, serta mengorganisir seminar dan kompetisi.</p>
+                      <ul class="mt-5 space-y-2 text-sm md:text-base text-gray-300">
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span> Menyusun program kerja untuk satu periode organisasi, </span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Menentukan topik pembelajaran yang akan disampaikan sebagai bahan ajar bagi anggota,</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Melatih anggota dalam Microsoft Office, Desain, dan Pemrograman Web,</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Mengorganisir acara-acara besar seperti seminar dan kompetisi,</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Mengelola keanggotaan, pelaporan, keuangan, dan program kerja,</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Memimpin rapat evaluasi setelah setiap kegiatan untuk meningkatkan kualitas program ke depannya.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="md:w-[260px] bg-gradient-to-br from-indigo-600/80 via-indigo-500/70 to-sky-600/80 p-6 md:p-8 text-gray-50">
+                      <h3 class="mt-4 text-2xl font-bold">Ketua UKM LCC</h3>
+                      <p class="mt-2 text-sm font-semibold text-white/80">Unit Kegiatan Mahasiswa LP3I Computer CLub</p>
+                      <p class="text-sm font-semibold text-white/80">Politeknik LP3I Kampus Tasikmalaya</p>
+                      <p class="mt-6 text-sm leading-relaxed text-white/75">Juli 2024 - Juli 2025</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="group bg-gray-900/60 border border-indigo-900/40 rounded-2xl shadow-xl overflow-hidden">
+                  <div class="flex flex-col-reverse md:flex-row">
+                    <div class="flex-1 p-6 md:p-8 bg-gray-950/70">
+                      <h4 class="text-xl md:text-2xl font-semibold">Deskripsi Kegiatan</h4>
+                      <p class="mt-4 text-sm md:text-base text-gray-300 leading-relaxed">Berpengalaman sebagai Sekretaris sekaligus Ketua Sangga Perintis Pramuka, dengan tugas menyusun proposal acara, mencatat kehadiran, membuat laporan kegiatan, merancang program kerja, serta menyusun dan menyampaikan materi pembelajaran untuk pengembangan anggota..</p>
+                      <ul class="mt-5 space-y-2 text-sm md:text-base text-gray-300">
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Membuat proposal untuk acara-acara besar Pramuka, </span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Mencatat kehadiran anggota pada setiap kegiatan,</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Membuat laporan kegiatan harian dan laporan acara,</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Membantu menyusun dan memberikan ide untuk rancangan program kerja dalam satu periode,</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+                          <span>Menyusun ide, membuat dan menyampaikan materi pembelajaran terkait Pramuka.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="md:w-[260px] bg-gradient-to-br from-indigo-600/80 via-indigo-500/70 to-sky-600/80 p-6 md:p-8 text-gray-50">
+                      <h3 class="mt-4 text-2xl font-bold leading-7">Sekretaris dan Ketua Divisi Sangga Perintis Pramuka Bantara</h3>
+                      <p class="mt-2 text-sm font-semibold text-white/80">SMK Negeri 3 Banjar</p>
+                      <p class="mt-6 text-sm leading-relaxed text-white/75">Mei 2022 - Mei 2023</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards Section -->
+      <!-- <section id="awardsSection" class="bg-gradient-to-r from-gray-950 via-indigo-950 to-gray-950 text-gray-50 p-5 lg:p-14 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+          <div class="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(79,70,229,0.35),_transparent_60%)]"></div>
+        </div>
+        <div class="relative z-10 max-w-6xl mx-auto space-y-10">
+          <div class="text-center">
+            <p class="uppercase tracking-[0.35em] text-sm md:text-base text-indigo-400 font-semibold">Awards</p>
+            <h2 class="mt-2 text-3xl md:text-4xl font-bold">Penghargaan &amp; Sertifikat</h2>
+            <p class="mt-3 text-sm md:text-base text-gray-300 max-w-3xl mx-auto">Koleksi apresiasi profesional yang saya raih melalui kompetisi, pelatihan, dan kontribusi dalam dunia teknologi.</p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <article class="group relative overflow-hidden rounded-3xl border border-indigo-900/40 bg-gray-900/60 shadow-xl">
+              <div class="relative h-48 overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: linear-gradient(180deg, rgba(30, 64, 175, 0.05) 0%, rgba(15, 23, 42, 0.8) 100%), url('https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/10 to-transparent"></div>
+                <div class="absolute top-4 left-4 flex items-center gap-2">
+                  <span class="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600/90 text-lg">
+                    <i class="fa-solid fa-award"></i>
+                  </span>
+                  <span class="rounded-full bg-indigo-900/70 px-3 py-1 text-xs font-semibold">Sertifikat</span>
+                </div>
+              </div>
+              <div class="space-y-3 p-6">
+                <div class="flex items-center justify-between text-xs text-indigo-300 uppercase tracking-[0.3em]">
+                  <span>Front-end</span>
+                  <span>2024</span>
+                </div>
+                <h3 class="text-xl font-semibold">Certified Front-end Developer</h3>
+                <p class="text-sm text-gray-300 leading-relaxed">Pengakuan resmi atas keberhasilan menyelesaikan program intensif pengembangan antarmuka modern berbasis framework.</p>
+                <div class="flex items-center gap-1 text-yellow-400">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+
+            <article class="group relative overflow-hidden rounded-3xl border border-indigo-900/40 bg-gray-900/60 shadow-xl">
+              <div class="relative h-48 overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: linear-gradient(180deg, rgba(2, 132, 199, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%), url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/10 to-transparent"></div>
+                <div class="absolute top-4 left-4 flex items-center gap-2">
+                  <span class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-500/90 text-lg">
+                    <i class="fa-solid fa-trophy"></i>
+                  </span>
+                  <span class="rounded-full bg-sky-900/70 px-3 py-1 text-xs font-semibold">Kompetisi</span>
+                </div>
+              </div>
+              <div class="space-y-3 p-6">
+                <div class="flex items-center justify-between text-xs text-sky-300 uppercase tracking-[0.3em]">
+                  <span>UI/UX</span>
+                  <span>2023</span>
+                </div>
+                <h3 class="text-xl font-semibold">Gold Winner UI/UX Challenge</h3>
+                <p class="text-sm text-gray-300 leading-relaxed">Menjadi juara pertama dalam lomba perancangan pengalaman pengguna dengan fokus pada aksesibilitas produk digital.</p>
+                <div class="flex items-center gap-1 text-yellow-400">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+            </article>
+
+            <article class="group relative overflow-hidden rounded-3xl border border-indigo-900/40 bg-gray-900/60 shadow-xl">
+              <div class="relative h-48 overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: linear-gradient(180deg, rgba(30, 128, 69, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%), url('https://images.unsplash.com/photo-1545239351-f11e1f2859fb?auto=format&fit=crop&w=900&q=80')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/10 to-transparent"></div>
+                <div class="absolute top-4 left-4 flex items-center gap-2">
+                  <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/90 text-lg">
+                    <i class="fa-solid fa-medal"></i>
+                  </span>
+                  <span class="rounded-full bg-emerald-900/70 px-3 py-1 text-xs font-semibold">Penghargaan</span>
+                </div>
+              </div>
+              <div class="space-y-3 p-6">
+                <div class="flex items-center justify-between text-xs text-emerald-300 uppercase tracking-[0.3em]">
+                  <span>Leadership</span>
+                  <span>2022</span>
+                </div>
+                <h3 class="text-xl font-semibold">Outstanding Tech Mentor</h3>
+                <p class="text-sm text-gray-300 leading-relaxed">Diberikan kepada mentor terbaik yang berhasil mengantarkan tim inkubasi startup memenangkan pendanaan awal.</p>
+                <div class="flex items-center gap-1 text-yellow-400">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+
+            <article class="group relative overflow-hidden rounded-3xl border border-indigo-900/40 bg-gray-900/60 shadow-xl">
+              <div class="relative h-48 overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: linear-gradient(180deg, rgba(126, 34, 206, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%), url('https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=900&q=80')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/10 to-transparent"></div>
+                <div class="absolute top-4 left-4 flex items-center gap-2">
+                  <span class="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/90 text-lg">
+                    <i class="fa-solid fa-certificate"></i>
+                  </span>
+                  <span class="rounded-full bg-purple-900/70 px-3 py-1 text-xs font-semibold">Pelatihan</span>
+                </div>
+              </div>
+              <div class="space-y-3 p-6">
+                <div class="flex items-center justify-between text-xs text-purple-300 uppercase tracking-[0.3em]">
+                  <span>Cloud</span>
+                  <span>2021</span>
+                </div>
+                <h3 class="text-xl font-semibold">Professional Cloud Practitioner</h3>
+                <p class="text-sm text-gray-300 leading-relaxed">Sertifikasi penyelesaian pelatihan arsitektur cloud dan deployment dengan fokus keamanan serta skalabilitas layanan.</p>
+                <div class="flex items-center gap-1 text-yellow-400">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section> -->
     </main>
 
     <!-- Footer -->
@@ -1152,6 +1230,12 @@
     <script>
       AOS.init();
     </script>
+
+    <script>
+      const skillContent = document.querySelector('.skill-content').cloneNode(true);
+      document.querySelector('.skill-container').appendChild(skillContent);
+    </script>
+
     <script src="src/public/script.js"></script>
   </body>
 </html>
