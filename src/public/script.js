@@ -1,5 +1,5 @@
 // ----- Running text di hero section
-const words = ['Student...', 'Programmer...', 'Content Creator...'];
+const words = ['Student...', 'Programmer...'];
 let currentWord = 0;
 let currentChar = 0;
 const typingText = document.getElementById('typingText');
